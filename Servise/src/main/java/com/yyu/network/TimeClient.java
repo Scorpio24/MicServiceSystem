@@ -1,5 +1,6 @@
 package com.yyu.network;
 
+import com.yyu.POJO.Response;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;
@@ -22,7 +23,7 @@ public class TimeClient {
                         @Override
                         public void initChannel(SocketChannel ch) throws Exception{
                             ch.pipeline().addLast(new LineBasedFrameDecoder(1024));
-                            ch.pipeline().addLast(new StringDecoder());
+                            ch.pipeline().addLast(new ResponseDecoder(Response.class));
                             ch.pipeline().addLast(new TimeClientHandler());
                         }
                     });

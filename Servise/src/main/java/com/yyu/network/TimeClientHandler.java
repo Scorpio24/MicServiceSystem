@@ -1,10 +1,13 @@
 package com.yyu.network;
 
+import com.yyu.POJO.Response;
+import com.yyu.Util.SerializationUtil;
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelHandlerAdapter;
 import io.netty.channel.ChannelHandlerContext;
 
+import java.util.HashMap;
 import java.util.logging.Logger;
 
 public class TimeClientHandler extends ChannelHandlerAdapter{
@@ -15,7 +18,7 @@ public class TimeClientHandler extends ChannelHandlerAdapter{
 //    private final ByteBuf firstMessage;
 
     public TimeClientHandler(){
-        req = ("python D:\\test.py decs" + System.getProperty("line.separator")).getBytes();
+        req = ("python D:/test.py decs" + System.getProperty("line.separator")).getBytes();
     }
 
     @Override
@@ -32,9 +35,18 @@ public class TimeClientHandler extends ChannelHandlerAdapter{
     }
 
     @Override
+    @SuppressWarnings("unchecked")
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception{
-        String body = (String) msg;
-        System.out.println("Now is : " + body + "; the counter is : " + ++counter);
+//        System.out.println(msg);
+//        byte[] body = (byte[]) msg;
+//        HashMap<String, String> result = SerializationUtil.deserialize(body, HashMap.class);
+//        String body = (String) msg;
+//        System.out.println(body);
+//        System.out.println(result.toString());
+        System.out.printf("channelRead");
+        Response response = (Response) msg;
+        HashMap result = (HashMap<String, String>) response.getResult();
+        System.out.println(result.toString());
     }
 
     @Override
