@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.bootdo.system.dao.EvtLogDao">
+
+	<select id="get" resultType="com.bootdo.system.domain.EvtLogDO">
+		select `LOG_NR_`,`TYPE_`,`PROC_DEF_ID_`,`PROC_INST_ID_`,`EXECUTION_ID_`,`TASK_ID_`,`TIME_STAMP_`,`USER_ID_`,`DATA_`,`LOCK_OWNER_`,`LOCK_TIME_`,`IS_PROCESSED_` from act_evt_log where LOG_NR_ = #{value}
+	</select>
+
+	<select id="list" resultType="com.bootdo.system.domain.EvtLogDO">
+		select `LOG_NR_`,`TYPE_`,`PROC_DEF_ID_`,`PROC_INST_ID_`,`EXECUTION_ID_`,`TASK_ID_`,`TIME_STAMP_`,`USER_ID_`,`DATA_`,`LOCK_OWNER_`,`LOCK_TIME_`,`IS_PROCESSED_` from act_evt_log
+        <where>  
+		  		  <if test="logNr != null and logNr != ''"> and LOG_NR_ = #{logNr} </if>
+		  		  <if test="type != null and type != ''"> and TYPE_ = #{type} </if>
+		  		  <if test="procDefId != null and procDefId != ''"> and PROC_DEF_ID_ = #{procDefId} </if>
+		  		  <if test="procInstId != null and procInstId != ''"> and PROC_INST_ID_ = #{procInstId} </if>
+		  		  <if test="executionId != null and executionId != ''"> and EXECUTION_ID_ = #{executionId} </if>
+		  		  <if test="taskId != null and taskId != ''"> and TASK_ID_ = #{taskId} </if>
+		  		  <if test="timeStamp != null and timeStamp != ''"> and TIME_STAMP_ = #{timeStamp} </if>
+		  		  <if test="userId != null and userId != ''"> and USER_ID_ = #{userId} </if>
+		  		  <if test="data != null and data != ''"> and DATA_ = #{data} </if>
+		  		  <if test="lockOwner != null and lockOwner != ''"> and LOCK_OWNER_ = #{lockOwner} </if>
+		  		  <if test="lockTime != null and lockTime != ''"> and LOCK_TIME_ = #{lockTime} </if>
+		  		  <if test="isProcessed != null and isProcessed != ''"> and IS_PROCESSED_ = #{isProcessed} </if>
+		  		</where>
+        <choose>
+            <when test="sort != null and sort.trim() != ''">
+                order by ${sort} ${order}
+            </when>
+			<otherwise>
+                order by LOG_NR_ desc
+			</otherwise>
+        </choose>
+		<if test="offset != null and limit != null">
+			limit #{offset}, #{limit}
+		</if>
+	</select>
+	
+ 	<select id="count" resultType="int">
+		select count(*) from act_evt_log
+		 <where>  
+		  		  <if test="logNr != null and logNr != ''"> and LOG_NR_ = #{logNr} </if>
+		  		  <if test="type != null and type != ''"> and TYPE_ = #{type} </if>
+		  		  <if test="procDefId != null and procDefId != ''"> and PROC_DEF_ID_ = #{procDefId} </if>
+		  		  <if test="procInstId != null and procInstId != ''"> and PROC_INST_ID_ = #{procInstId} </if>
+		  		  <if test="executionId != null and executionId != ''"> and EXECUTION_ID_ = #{executionId} </if>
+		  		  <if test="taskId != null and taskId != ''"> and TASK_ID_ = #{taskId} </if>
+		  		  <if test="timeStamp != null and timeStamp != ''"> and TIME_STAMP_ = #{timeStamp} </if>
+		  		  <if test="userId != null and userId != ''"> and USER_ID_ = #{userId} </if>
+		  		  <if test="data != null and data != ''"> and DATA_ = #{data} </if>
+		  		  <if test="lockOwner != null and lockOwner != ''"> and LOCK_OWNER_ = #{lockOwner} </if>
+		  		  <if test="lockTime != null and lockTime != ''"> and LOCK_TIME_ = #{lockTime} </if>
+		  		  <if test="isProcessed != null and isProcessed != ''"> and IS_PROCESSED_ = #{isProcessed} </if>
+		  		</where>
+	</select>
+	 
+	<insert id="save" parameterType="com.bootdo.system.domain.EvtLogDO" useGeneratedKeys="true" keyProperty="logNr">
+		insert into act_evt_log
+		(
+			`TYPE_`, 
+			`PROC_DEF_ID_`, 
+			`PROC_INST_ID_`, 
+			`EXECUTION_ID_`, 
+			`TASK_ID_`, 
+			`TIME_STAMP_`, 
+			`USER_ID_`, 
+			`DATA_`, 
+			`LOCK_OWNER_`, 
+			`LOCK_TIME_`, 
+			`IS_PROCESSED_`
+		)
+		values
+		(
+			#{type}, 
+			#{procDefId}, 
+			#{procInstId}, 
+			#{executionId}, 
+			#{taskId}, 
+			#{timeStamp}, 
+			#{userId}, 
+			#{data}, 
+			#{lockOwner}, 
+			#{lockTime}, 
+			#{isProcessed}
+		)
+	</insert>
+	 
+	<update id="update" parameterType="com.bootdo.system.domain.EvtLogDO">
+		update act_evt_log 
+		<set>
+			<if test="type != null">`TYPE_` = #{type}, </if>
+			<if test="procDefId != null">`PROC_DEF_ID_` = #{procDefId}, </if>
+			<if test="procInstId != null">`PROC_INST_ID_` = #{procInstId}, </if>
+			<if test="executionId != null">`EXECUTION_ID_` = #{executionId}, </if>
+			<if test="taskId != null">`TASK_ID_` = #{taskId}, </if>
+			<if test="timeStamp != null">`TIME_STAMP_` = #{timeStamp}, </if>
+			<if test="userId != null">`USER_ID_` = #{userId}, </if>
+			<if test="data != null">`DATA_` = #{data}, </if>
+			<if test="lockOwner != null">`LOCK_OWNER_` = #{lockOwner}, </if>
+			<if test="lockTime != null">`LOCK_TIME_` = #{lockTime}, </if>
+			<if test="isProcessed != null">`IS_PROCESSED_` = #{isProcessed}</if>
+		</set>
+		where LOG_NR_ = #{logNr}
+	</update>
+	
+	<delete id="remove">
+		delete from act_evt_log where LOG_NR_ = #{value}
+	</delete>
+	
+	<delete id="batchRemove">
+		delete from act_evt_log where LOG_NR_ in 
+		<foreach item="logNr" collection="array" open="(" separator="," close=")">
+			#{logNr}
+		</foreach>
+	</delete>
+
+</mapper>
