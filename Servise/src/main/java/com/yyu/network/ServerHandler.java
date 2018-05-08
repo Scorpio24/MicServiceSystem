@@ -1,6 +1,6 @@
 package com.yyu.network;
 
-import com.yyu.POJO.Response;
+import com.yyu.POJO.IOBody;
 import com.yyu.Util.SerializationUtil;
 import com.yyu.execute.Execute;
 import io.netty.buffer.ByteBuf;
@@ -9,36 +9,27 @@ import io.netty.channel.ChannelHandlerAdapter;
 import io.netty.channel.ChannelHandlerContext;
 
 import java.util.HashMap;
-import java.util.Map;
 
-public class TimeServerHandler extends ChannelHandlerAdapter {
-
-    private int counter;
+public class ServerHandler extends ChannelHandlerAdapter {
 
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception{
+        System.out.printf("serverhandler");
+        System.out.println(msg);
         String body = (String) msg;
-        String resultString;
         Object result;
-        Response response = new Response();
+        IOBody IOBody = new IOBody();
 
         result = this.execute(body);
-        response.setResult(result);
-        byte[] resultBytes = SerializationUtil.serialize(response);
+        IOBody.setResult(result);
+        byte[] resultBytes = SerializationUtil.serialize(IOBody);
         byte[] lineBytes = System.getProperty("line.separator").getBytes();
 
         byte[] resultData = this.byteArrayMerge(resultBytes, lineBytes);
 
         ByteBuf resp = Unpooled.copiedBuffer(resultData);
-//        resultString = result.toString() + System.getProperty("line.separator");
-//        ByteBuf resp = Unpooled.copiedBuffer(resultString.getBytes());
         ctx.writeAndFlush(resp);
     }
-
-//    @Override
-//    public void channelReadComplete(ChannelHandlerContext ctx) throws Exception{
-//        ctx.flush();
-//    }
 
     @Override
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause){

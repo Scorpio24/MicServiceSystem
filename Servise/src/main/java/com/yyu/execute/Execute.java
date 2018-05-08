@@ -10,6 +10,8 @@ import java.util.List;
 
 public class Execute {
     public HashMap<String, String> exeProcess(String cmd) throws Exception{
+        System.out.printf("execute");
+        System.out.println(cmd);
         Process process = Runtime.getRuntime().exec(cmd);
 
         InputStream is = process.getInputStream();
@@ -35,10 +37,5 @@ public class Execute {
         is.close();
 
         return result;
-    }
-
-    public static void main(String[] args) throws Exception{
-        String cmd = "python D:\\test.py decs";
-        new Execute().exeProcess(cmd);
     }
 }

@@ -7,11 +7,11 @@ import io.netty.handler.codec.ByteToMessageDecoder;
 
 import java.util.List;
 
-public class ResponseDecoder extends ByteToMessageDecoder {
+public class IOBodyDecoder extends ByteToMessageDecoder {
 
     private Class<?> genericClass;
 
-    public ResponseDecoder(Class<?> genericClass) {
+    public IOBodyDecoder(Class<?> genericClass) {
         this.genericClass = genericClass;
     }
 

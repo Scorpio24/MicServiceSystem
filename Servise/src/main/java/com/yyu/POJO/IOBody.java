@@ -1,7 +1,7 @@
 package com.yyu.POJO;
 
 
-public class Response {
+public class IOBody {
     private Object result;
 
     public Object getResult() {

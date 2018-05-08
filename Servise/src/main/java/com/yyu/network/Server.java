@@ -11,7 +11,7 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
 import io.netty.handler.codec.LineBasedFrameDecoder;
 import io.netty.handler.codec.string.StringDecoder;
 
-public class TimeServer {
+public class Server {
     public void bind(int port) throws Exception {
         EventLoopGroup bossGroup = new NioEventLoopGroup();
         EventLoopGroup workerGroup = new NioEventLoopGroup();
@@ -36,7 +36,7 @@ public class TimeServer {
         protected void initChannel(SocketChannel arg0) throws Exception {
             arg0.pipeline().addLast(new LineBasedFrameDecoder(1024));
             arg0.pipeline().addLast(new StringDecoder());
-            arg0.pipeline().addLast(new TimeServerHandler());
+            arg0.pipeline().addLast(new ServerHandler());
         }
     }
 
@@ -49,6 +49,6 @@ public class TimeServer {
 
             }
         }
-        new TimeServer().bind(port);
+        new Server().bind(port);
     }
 }
