@@ -1,4 +1,4 @@
-package com.yyu.Controller;
+package com.yyu.controller;
 
 import com.yyu.POJO.IOBody;
 import com.yyu.network.ServiceRequestClient;

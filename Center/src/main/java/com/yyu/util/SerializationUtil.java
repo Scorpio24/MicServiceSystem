@@ -1,4 +1,4 @@
-package com.yyu.Util;
+package com.yyu.util;
 
 import com.dyuproject.protostuff.LinkedBuffer;
 import com.dyuproject.protostuff.ProtostuffIOUtil;

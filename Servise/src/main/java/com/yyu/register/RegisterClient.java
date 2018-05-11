@@ -21,7 +21,7 @@ public class RegisterClient extends ChannelHandlerAdapter {
     private IOBody IOBody;
     private IOBody serviceConfig = new IOBody();
 
-    public IOBody register(String host, int port, HashMap<String, String> serviceConfig){
+    public IOBody register(String host, int port, HashMap<String, Object> serviceConfig){
         this.serviceConfig.setResult(serviceConfig);
         try {
             connect(port, host);

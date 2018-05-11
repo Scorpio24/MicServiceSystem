@@ -1,3 +1,16 @@
 spring:
-  profiles:
-    active: dev
+  datasource:
+    url: jdbc:mysql://localhost:3306/micservicesys?serverTimezone=UTC&autoReconnect=true&failOverReadOnly=false&characterEncoding=utf-8&useUnicode=true&zeroDateTimeBehavior=convertToNull
+    username: root
+    password: '123456'
+    driverClassName: com.mysql.cj.jdbc.Driver
+
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+  mapper-locations: mybatis/*Mapper.xml
+  typeAliasesPackage: com.yyu.domain
+
+server:
+  port: 8082

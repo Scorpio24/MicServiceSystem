@@ -1,6 +1,6 @@
 package com.yyu.network;
 
-import com.yyu.Util.SerializationUtil;
+import com.yyu.util.SerializationUtil;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.ByteToMessageDecoder;

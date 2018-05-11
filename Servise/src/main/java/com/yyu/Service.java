@@ -23,7 +23,7 @@ public class Service {
             return;
         }
 
-        HashMap<String, String> serviceConfig;
+        HashMap<String, Object> serviceConfig;
         try{
             serviceConfig = new ReadConfigFile().getServiseConfig();
         }
@@ -33,18 +33,23 @@ public class Service {
             return;
         }
         if (!serviceConfig.containsKey("name") || !serviceConfig.containsKey("ip")
-                || !serviceConfig.containsKey("port") || !serviceConfig.containsKey("run"))
+                || !serviceConfig.containsKey("port") || !serviceConfig.containsKey("run")
+                || !serviceConfig.containsKey("resultFormat") || !serviceConfig.containsKey("paramFormat"))
         {
             System.out.println("Fail to get Service Config!");
             return;
         }
 
         IOBody IOBody = new RegisterClient().register(ip, port, serviceConfig);
-        if (IOBody == null && !("register success!".equals(IOBody.getResult()))){
+        if (IOBody == null || !("register success!".equals(IOBody.getResult()))){
             System.out.println("fail to register!");
             return;
         }
+        if (!("stop success!".equals(IOBody.getResult()))){
+            System.out.println("Stop Service!");
+            return;
+        }
 
-        new Server().bind(Integer.valueOf(serviceConfig.get("port")));
+        new Server().bind(Integer.valueOf((String)serviceConfig.get("port")));
     }
 }

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.yyu.dao.ServiceDao">
+
+	<select id="get" resultType="com.yyu.domain.ServiceDO">
+		select `id`,`serviceName`,`serviceIP`,`servicePort`,`serviceParam`,`serviceResult` from service_table where id = #{value}
+	</select>
+
+	<select id="list" resultType="com.yyu.domain.ServiceDO">
+		select `id`,`serviceName`,`serviceIP`,`servicePort`,`serviceParam`,`serviceResult` from service_table
+        <where>
+			<if test="id != null and id != ''"> and id = #{id} </if>
+		  	<if test="serviceName != null and serviceName != ''"> and serviceName = #{serviceName} </if>
+		  	<if test="serviceIP != null and serviceIP != ''"> and serviceIP = #{serviceIP} </if>
+		  	<if test="servicePort != null and servicePort != ''"> and servicePort = #{servicePort} </if>
+		  	<if test="serviceParam != null and serviceParam != ''"> and serviceParam = #{serviceParam} </if>
+		  	<if test="serviceResult != null and serviceResult != ''"> and serviceResult = #{serviceResult} </if>
+		</where>
+        <choose>
+            <when test="sort != null and sort.trim() != ''">
+                order by ${sort} ${order}
+            </when>
+			<otherwise>
+                order by id desc
+			</otherwise>
+        </choose>
+		<if test="offset != null and limit != null">
+			limit #{offset}, #{limit}
+		</if>
+	</select>
+	
+ 	<select id="count" resultType="int">
+		select count(*) from service_tables
+		<where>
+			<if test="id != null and id != ''"> and id = #{id} </if>
+			<if test="serviceName != null and serviceName != ''"> and serviceName = #{serviceName} </if>
+			<if test="serviceIP != null and serviceIP != ''"> and serviceIP = #{serviceIP} </if>
+			<if test="servicePort != null and servicePort != ''"> and servicePort = #{servicePort} </if>
+			<if test="serviceParam != null and serviceParam != ''"> and serviceParam = #{serviceParam} </if>
+			<if test="serviceResult != null and serviceResult != ''"> and serviceResult = #{serviceResult} </if>
+		</where>
+	</select>
+	 
+	<insert id="save" parameterType="com.yyu.domain.ServiceDO" useGeneratedKeys="true" keyProperty="id">
+		insert into service_table
+		(
+			`serviceName`,
+			`serviceIP`,
+			`servicePort`,
+			`serviceParam`,
+			`serviceResult`
+		)
+		values
+		(
+			#{serviceName},
+			#{serviceIP},
+			#{servicePort},
+			#{serviceParam},
+			#{serviceResult}
+		)
+	</insert>
+	 
+	<update id="update" parameterType="com.yyu.domain.ServiceDO">
+		update service_table
+		<set>
+			<if test="id != null and id != ''"> id = #{id} </if>
+			<if test="serviceName != null and serviceName != ''"> serviceName = #{serviceName} </if>
+			<if test="serviceIP != null and serviceIP != ''"> serviceIP = #{serviceIP} </if>
+			<if test="servicePort != null and servicePort != ''"> servicePort = #{servicePort} </if>
+			<if test="serviceParam != null and serviceParam != ''"> serviceParam = #{serviceParam} </if>
+			<if test="serviceResult != null and serviceResult != ''"> serviceResult = #{serviceResult} </if>
+		</set>
+		where id = #{id}
+	</update>
+
+	<delete id="remove" parameterType="com.yyu.domain.ServiceDO">
+		delete from service_table
+		where serviceName = #{serviceName} and serviceIP = #{serviceIP} and servicePort = #{servicePort}
+	</delete>
+
+</mapper>

@@ -10,8 +10,10 @@ import java.util.List;
 
 public class ReadConfigFile {
 
-    public HashMap<String, String> getServiseConfig() throws IOException{
-        HashMap<String, String> serviseConfig = new HashMap<>();
+    public HashMap<String, Object> getServiseConfig() throws IOException{
+        HashMap<String, Object> serviseConfig = new HashMap<>();
+        List<String> paramFormat = new ArrayList<>();
+        List<String> resultFormat = new ArrayList<>();
         String serviseName;
         String run;
         String ipAdress;
@@ -19,7 +21,6 @@ public class ReadConfigFile {
 
         FileReader fr = new FileReader("src/main/java/com/yyu/readConfigFile/ServiseConfig.txt");
         BufferedReader br = new BufferedReader(fr);
-
         if ((serviseName = br.readLine()) != null){
             serviseConfig.put("name", serviseName);
         }
@@ -33,15 +34,31 @@ public class ReadConfigFile {
             serviseConfig.put("port", port);
         }
 
+        FileReader fr2 = new FileReader("src/main/java/com/yyu/readConfigFile/ParamConfig.txt");
+        BufferedReader br2 = new BufferedReader(fr2);
+        String line2;
+        while ((line2 = br2.readLine()) != null) {
+            paramFormat.add(line2);
+        }
+        if (!paramFormat.isEmpty()){
+            serviseConfig.put("paramFormat", paramFormat);
+        }
+
+        FileReader fr3 = new FileReader("src/main/java/com/yyu/readConfigFile/ResultConfig.txt");
+        BufferedReader br3 = new BufferedReader(fr3);
+        String line3;
+        while ((line3 = br3.readLine()) != null) {
+            resultFormat.add(line3);
+        }
+        if (!resultFormat.isEmpty()){
+            serviseConfig.put("resultFormat", resultFormat);
+        }
+
         return serviseConfig;
     }
 
     public List<String> getResultFormat(){
         List<String> resultFormat = new ArrayList<>();
-        HashMap<String, String> serviseConfig = new HashMap<>();
-        String serviseName = null;
-        String ipAdress = null;
-        String port = null;
 
         String line;
         FileReader fr;
