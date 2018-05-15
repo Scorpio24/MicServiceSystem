@@ -7,28 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e0d12718-e70a-4159-bb3a-67a979a77077" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/../Center/src/main/java/com/yyu/dao/ServiceDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Center/src/main/java/com/yyu/domain/ServiceDO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Center/src/main/java/com/yyu/service/ServiceTableService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Center/src/main/java/com/yyu/service/impl/ServiceTableServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Center/src/main/resources/log4j.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Center/src/main/resources/mybatis-config.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Center/src/main/resources/mybatis/ConfigTablesMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yyu/readConfigFile/ParamConfig.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Center/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Center/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Center/src/main/java/com/yyu/Controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Center/src/main/java/com/yyu/controller/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Center/src/main/java/com/yyu/Controller/PythonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Center/src/main/java/com/yyu/controller/PythonController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Center/src/main/java/com/yyu/Controller/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Center/src/main/java/com/yyu/controller/RegisterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Center/src/main/java/com/yyu/Util/SerializationUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Center/src/main/java/com/yyu/util/SerializationUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Center/src/main/java/com/yyu/network/IOBodyDecoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Center/src/main/java/com/yyu/network/IOBodyDecoder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Center/src/main/java/com/yyu/network/RegisterServerHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Center/src/main/java/com/yyu/network/RegisterServerHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Center/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../Center/src/main/resources/application-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Center/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../Center/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yyu/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yyu/Service.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yyu/readConfigFile/ReadConfigFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yyu/readConfigFile/ReadConfigFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yyu/readConfigFile/ServiseConfig.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yyu/readConfigFile/ServiseConfig.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yyu/register/RegisterClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yyu/register/RegisterClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../论文.doc" beforeDir="false" afterPath="$PROJECT_DIR$/../论文.doc" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -58,8 +38,8 @@
       <file leaf-file-name="Execute.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/yyu/execute/Execute.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="30" column="44" selection-start-line="30" selection-start-column="44" selection-end-line="30" selection-end-column="44" />
+            <state relative-caret-position="288">
+              <caret line="16" column="50" lean-forward="true" selection-start-line="16" selection-start-column="50" selection-end-line="16" selection-end-column="50" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -67,20 +47,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Server.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/yyu/network/Server.java">
+      <file leaf-file-name="ServerHandler.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/yyu/network/ServerHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="35" column="43" selection-start-line="35" selection-start-column="43" selection-end-line="35" selection-end-column="43" />
+            <state relative-caret-position="385">
+              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ServerHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/yyu/network/ServerHandler.java">
+      <file leaf-file-name="SerializationUtil.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/yyu/Util/SerializationUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+            <state relative-caret-position="385">
+              <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -91,8 +74,8 @@
       <file leaf-file-name="Service.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/yyu/Service.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="655">
-              <caret line="45" column="19" lean-forward="true" selection-start-line="45" selection-start-column="19" selection-end-line="45" selection-end-column="19" />
+            <state relative-caret-position="169">
+              <caret line="15" column="9" lean-forward="true" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -100,11 +83,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ReadConfigFile.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ReadConfigFile.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/yyu/readConfigFile/ReadConfigFile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="655">
-              <caret line="60" column="54" selection-start-line="60" selection-start-column="54" selection-end-line="60" selection-end-column="54" />
+            <state relative-caret-position="-353">
+              <caret line="25" column="9" lean-forward="true" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -112,8 +95,8 @@
       <file leaf-file-name="RegisterClient.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/yyu/register/RegisterClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="331">
-              <caret line="25" column="13" lean-forward="true" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+            <state relative-caret-position="216">
+              <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -209,9 +192,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -303,6 +283,9 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -475,6 +458,7 @@
       <workItem from="1525745719811" duration="15463000" />
       <workItem from="1525847001504" duration="8693000" />
       <workItem from="1525918762433" duration="2665000" />
+      <workItem from="1526371709190" duration="4274000" />
     </task>
     <servers />
   </component>
@@ -499,10 +483,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85598000" />
+    <option name="totallyTimeSpent" value="89872000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1098" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -517,7 +502,7 @@
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22156653" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2247854" />
       <window_info anchor="right" id="Database" order="6" weight="0.3299356" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -527,11 +512,11 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.399137" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32901832" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32901832" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -675,16 +660,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="49" selection-start-line="49" selection-end-line="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yyu/Util/SerializationUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="673">
-          <caret line="46" column="24" selection-start-line="46" selection-start-column="24" selection-end-line="46" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -845,16 +820,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yyu/execute/Execute.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="30" column="44" selection-start-line="30" selection-start-column="44" selection-end-line="30" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="583">
@@ -862,27 +827,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yyu/network/ServerHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/yyu/readConfigFile/ParamConfig.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="11" selection-start-column="11" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yyu/network/Server.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="35" column="43" selection-start-line="35" selection-start-column="43" selection-end-line="35" selection-end-column="43" />
         </state>
       </provider>
     </entry>
@@ -902,18 +850,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/yyu/register/RegisterClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="25" column="13" lean-forward="true" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+        <state relative-caret-position="216">
+          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yyu/Service.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yyu/network/Server.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="655">
-          <caret line="45" column="19" lean-forward="true" selection-start-line="45" selection-start-column="19" selection-end-line="45" selection-end-column="19" />
+        <state relative-caret-position="360">
+          <caret line="29" column="45" lean-forward="true" selection-start-line="29" selection-start-column="45" selection-end-line="29" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yyu/execute/Execute.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="50" lean-forward="true" selection-start-line="16" selection-start-column="50" selection-end-line="16" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -922,8 +877,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/yyu/readConfigFile/ReadConfigFile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="655">
-          <caret line="60" column="54" selection-start-line="60" selection-start-column="54" selection-end-line="60" selection-end-column="54" />
+        <state relative-caret-position="-353">
+          <caret line="25" column="9" lean-forward="true" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yyu/Service.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="15" column="9" lean-forward="true" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yyu/network/ServerHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yyu/Util/SerializationUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
