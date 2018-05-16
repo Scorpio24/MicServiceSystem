@@ -4,11 +4,11 @@
 <mapper namespace="com.yyu.dao.ServiceDao">
 
 	<select id="get" resultType="com.yyu.domain.ServiceDO">
-		select `id`,`serviceName`,`serviceIP`,`servicePort`,`serviceParam`,`serviceResult` from service_table where id = #{value}
+		select `id`,`serviceName`,`serviceIP`,`servicePort`,`serviceParam`,`serviceResult`,`serviceStatus`,`serviceType` from service_table
 	</select>
 
 	<select id="list" resultType="com.yyu.domain.ServiceDO">
-		select `id`,`serviceName`,`serviceIP`,`servicePort`,`serviceParam`,`serviceResult` from service_table
+		select `id`,`serviceName`,`serviceIP`,`servicePort`,`serviceParam`,`serviceResult`,`serviceStatus`,`serviceType` from service_table
         <where>
 			<if test="id != null and id != ''"> and id = #{id} </if>
 		  	<if test="serviceName != null and serviceName != ''"> and serviceName = #{serviceName} </if>
@@ -16,6 +16,8 @@
 		  	<if test="servicePort != null and servicePort != ''"> and servicePort = #{servicePort} </if>
 		  	<if test="serviceParam != null and serviceParam != ''"> and serviceParam = #{serviceParam} </if>
 		  	<if test="serviceResult != null and serviceResult != ''"> and serviceResult = #{serviceResult} </if>
+			<if test="serviceStatus != null and serviceStatus != ''"> and serviceStatus = #{serviceStatus} </if>
+			<if test="serviceType != null and serviceType != ''"> and serviceType = #{serviceType} </if>
 		</where>
         <choose>
             <when test="sort != null and sort.trim() != ''">
@@ -39,6 +41,7 @@
 			<if test="servicePort != null and servicePort != ''"> and servicePort = #{servicePort} </if>
 			<if test="serviceParam != null and serviceParam != ''"> and serviceParam = #{serviceParam} </if>
 			<if test="serviceResult != null and serviceResult != ''"> and serviceResult = #{serviceResult} </if>
+			<if test="serviceStatus != null and serviceStatus != ''"> and serviceStatus = #{serviceStatus} </if>
 		</where>
 	</select>
 	 
@@ -49,7 +52,9 @@
 			`serviceIP`,
 			`servicePort`,
 			`serviceParam`,
-			`serviceResult`
+			`serviceResult`,
+			`serviceStatus`,
+			`serviceType`
 		)
 		values
 		(
@@ -57,21 +62,24 @@
 			#{serviceIP},
 			#{servicePort},
 			#{serviceParam},
-			#{serviceResult}
+			#{serviceResult},
+			#{serviceStatus},
+			#{serviceType}
 		)
 	</insert>
 	 
 	<update id="update" parameterType="com.yyu.domain.ServiceDO">
 		update service_table
 		<set>
-			<if test="id != null and id != ''"> id = #{id} </if>
-			<if test="serviceName != null and serviceName != ''"> serviceName = #{serviceName} </if>
-			<if test="serviceIP != null and serviceIP != ''"> serviceIP = #{serviceIP} </if>
-			<if test="servicePort != null and servicePort != ''"> servicePort = #{servicePort} </if>
 			<if test="serviceParam != null and serviceParam != ''"> serviceParam = #{serviceParam} </if>
 			<if test="serviceResult != null and serviceResult != ''"> serviceResult = #{serviceResult} </if>
+			<if test="serviceStatus != null and serviceStatus != ''"> serviceStatus = #{serviceStatus} </if>
 		</set>
-		where id = #{id}
+		<where>
+			<if test="serviceName != null and serviceName != ''"> and serviceName = #{serviceName} </if>
+			<if test="serviceIP != null and serviceIP != ''"> and serviceIP = #{serviceIP} </if>
+			<if test="servicePort != null and servicePort != ''"> and servicePort = #{servicePort} </if>
+		</where>
 	</update>
 
 	<delete id="remove" parameterType="com.yyu.domain.ServiceDO">

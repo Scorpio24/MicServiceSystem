@@ -11,6 +11,8 @@ public class ServiceDO implements Serializable {
 	private Long id;
 	//
 	private String serviceName;
+
+	private String serviceType;
 	//
 	private String serviceIP;
 	//
@@ -19,6 +21,16 @@ public class ServiceDO implements Serializable {
 	private String serviceParam;
 	//
 	private String serviceResult;
+
+	private String serviceStatus;
+
+	public String getServiceStatus() {
+		return serviceStatus;
+	}
+
+	public void setServiceStatus(String serviceStatus) {
+		this.serviceStatus = serviceStatus;
+	}
 
 	public static long getSerialVersionUID() {
 		return serialVersionUID;
@@ -70,5 +82,13 @@ public class ServiceDO implements Serializable {
 
 	public void setServiceResult(String serviceResult) {
 		this.serviceResult = serviceResult;
+	}
+
+	public String getServiceType() {
+		return serviceType;
+	}
+
+	public void setServiceType(String serviceType) {
+		this.serviceType = serviceType;
 	}
 }

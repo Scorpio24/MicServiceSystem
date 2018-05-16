@@ -18,8 +18,8 @@ public class ServiceTableServiceImpl implements ServiceTableService {
 	private ServiceDao serviceDao;
 
 	@Override
-	public ServiceDO get(Long id){
-		return serviceDao.get(id);
+	public List<ServiceDO> get(){
+		return serviceDao.get();
 	}
 
 	@Override

@@ -8,7 +8,7 @@ import java.util.Map;
 
 public interface ServiceTableService {
 	
-	ServiceDO get(Long id);
+	List<ServiceDO> get();
 	
 	List<ServiceDO> list(Map<String, Object> map);
 	

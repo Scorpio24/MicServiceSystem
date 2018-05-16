@@ -13,6 +13,7 @@ import io.netty.handler.codec.string.StringDecoder;
 
 public class Server {
     public void bind(int port) throws Exception {
+        System.out.println("开始监听……");
         EventLoopGroup bossGroup = new NioEventLoopGroup();
         EventLoopGroup workerGroup = new NioEventLoopGroup();
         try {
@@ -38,17 +39,5 @@ public class Server {
             arg0.pipeline().addLast(new StringDecoder());
             arg0.pipeline().addLast(new ServerHandler());
         }
-    }
-
-    public static void main(String[] args) throws Exception{
-        int port = 8080;
-        if (args != null && args.length > 0) {
-            try {
-                port = Integer.valueOf(args[0]);
-            } catch (NumberFormatException e) {
-
-            }
-        }
-        new Server().bind(port);
     }
 }

@@ -17,20 +17,21 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.sql.SQLIntegrityConstraintViolationException;
 import java.util.HashMap;
 
 public class RegisterServerHandler extends ChannelHandlerAdapter {
 
     @Override
-    public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception{
+    public void channelRead(ChannelHandlerContext ctx, Object msg){
         System.out.printf("serverhandler");
-        System.out.println(msg);
         IOBody body = (IOBody) msg;
+        System.out.println(body.getResult().toString());
         IOBody IOBody = new IOBody();
         HashMap<String, Object> serviceConfig = (HashMap) body.getResult();
         System.out.println(serviceConfig);
 
-        if ("run".equals(serviceConfig.get("run")))
+        if ("register".equals(serviceConfig.get("run")))
         {
             try {
                 save(serviceConfig);
@@ -38,7 +39,8 @@ public class RegisterServerHandler extends ChannelHandlerAdapter {
             }
             catch (Exception e)
             {
-                e.printStackTrace();
+//                e.printStackTrace();
+                IOBody.setResult("register success!");
             }
         }
 
@@ -76,13 +78,15 @@ public class RegisterServerHandler extends ChannelHandlerAdapter {
         return resultData;
     }
 
-    private void save(HashMap<String, Object> serviceConfig) throws IOException {
+    private void save(HashMap<String, Object> serviceConfig) throws Exception {
         ServiceDO serviceDO = new ServiceDO();
         serviceDO.setServiceIP((String)serviceConfig.get("ip"));
         serviceDO.setServiceName((String)serviceConfig.get("name"));
+        serviceDO.setServiceType((String)serviceConfig.get("type"));
         serviceDO.setServicePort((String)serviceConfig.get("port"));
         serviceDO.setServiceParam(serviceConfig.get("paramFormat").toString());
         serviceDO.setServiceResult(serviceConfig.get("resultFormat").toString());
+        serviceDO.setServiceStatus("run");
 
         InputStream inputStream = Resources.getResourceAsStream("mybatis-config.xml");
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
@@ -92,7 +96,7 @@ public class RegisterServerHandler extends ChannelHandlerAdapter {
         session.close();
     }
 
-    private void delete(HashMap<String, Object> serviceConfig) throws IOException {
+    private void delete(HashMap<String, Object> serviceConfig) throws Exception {
         ServiceDO serviceDO = new ServiceDO();
         serviceDO.setServiceIP((String)serviceConfig.get("ip"));
         serviceDO.setServiceName((String)serviceConfig.get("name"));

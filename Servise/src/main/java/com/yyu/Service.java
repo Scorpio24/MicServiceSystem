@@ -34,7 +34,8 @@ public class Service {
         }
         if (!serviceConfig.containsKey("name") || !serviceConfig.containsKey("ip")
                 || !serviceConfig.containsKey("port") || !serviceConfig.containsKey("run")
-                || !serviceConfig.containsKey("resultFormat") || !serviceConfig.containsKey("paramFormat"))
+                || !serviceConfig.containsKey("resultFormat") || !serviceConfig.containsKey("paramFormat")
+                || !serviceConfig.containsKey("type"))
         {
             System.out.println("Fail to get Service Config!");
             return;
@@ -42,11 +43,11 @@ public class Service {
 
         IOBody IOBody = new RegisterClient().register(ip, port, serviceConfig);
         if (IOBody == null || !("register success!".equals(IOBody.getResult()))){
+            if ("stop success!".equals(IOBody.getResult())){
+                System.out.println("Stop Service!");
+                return;
+            }
             System.out.println("fail to register!");
-            return;
-        }
-        if (!("stop success!".equals(IOBody.getResult()))){
-            System.out.println("Stop Service!");
             return;
         }
 

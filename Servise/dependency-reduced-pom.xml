@@ -28,7 +28,7 @@
             <configuration>
               <transformers>
                 <transformer>
-                  <mainClass>com.yyu.network.Server</mainClass>
+                  <mainClass>com.yyu.Service</mainClass>
                 </transformer>
               </transformers>
             </configuration>

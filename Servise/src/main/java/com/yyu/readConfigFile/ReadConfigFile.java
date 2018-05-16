@@ -15,17 +15,21 @@ public class ReadConfigFile {
         List<String> paramFormat = new ArrayList<>();
         List<String> resultFormat = new ArrayList<>();
         String serviseName;
-        String run;
+        String serviseType;
+        String ifregister;
         String ipAdress;
         String port;
-
-        FileReader fr = new FileReader("src/main/java/com/yyu/readConfigFile/ServiseConfig.txt");
+//        src/main/java/com/yyu/readConfigFile/
+        FileReader fr = new FileReader("ServiseConfig.txt");
         BufferedReader br = new BufferedReader(fr);
         if ((serviseName = br.readLine()) != null){
             serviseConfig.put("name", serviseName);
         }
-        if ((run = br.readLine()) != null){
-            serviseConfig.put("run", run);
+        if ((serviseType = br.readLine()) != null){
+            serviseConfig.put("type", serviseType);
+        }
+        if ((ifregister = br.readLine()) != null){
+            serviseConfig.put("run", ifregister);
         }
         if ((ipAdress = br.readLine()) != null){
             serviseConfig.put("ip", ipAdress);
@@ -34,7 +38,7 @@ public class ReadConfigFile {
             serviseConfig.put("port", port);
         }
 
-        FileReader fr2 = new FileReader("src/main/java/com/yyu/readConfigFile/ParamConfig.txt");
+        FileReader fr2 = new FileReader("ParamConfig.txt");
         BufferedReader br2 = new BufferedReader(fr2);
         String line2;
         while ((line2 = br2.readLine()) != null) {
@@ -44,7 +48,7 @@ public class ReadConfigFile {
             serviseConfig.put("paramFormat", paramFormat);
         }
 
-        FileReader fr3 = new FileReader("src/main/java/com/yyu/readConfigFile/ResultConfig.txt");
+        FileReader fr3 = new FileReader("ResultConfig.txt");
         BufferedReader br3 = new BufferedReader(fr3);
         String line3;
         while ((line3 = br3.readLine()) != null) {
@@ -66,7 +70,7 @@ public class ReadConfigFile {
         System.out.println("readconfigfile");
         try
         {
-            fr = new FileReader("src/main/java/com/yyu/readConfigFile/ResultConfig.txt");
+            fr = new FileReader("ResultConfig.txt");
         }
         catch (IOException e1)
         {

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head th:include="include :: header"></head>
+<body class="gray-bg">
+<div class="wrapper wrapper-content ">
+    <div class="col-sm-12">
+        <div class="row">
+            <div class="tab-content">
+                <div class="tab-pane nav active" id="tab-source">
+                    <div class="row">
+                        <table id="sourceTable" data-toggle="table"  data-striped="true" data-height="550">
+                            <thead>
+                                <th>服务名称</th>
+                                <th>服务类型</th>
+                                <th>服务所在IP</th>
+                                <th>服务所在端口</th>
+                                <th>服务调用参数描述</th>
+                                <th>服务调用结果描述</th>
+                                <th>服务运行状态</th>
+                            </thead>
+                            <tbody th:remove="all-but-first">
+                            <tr th:each="serviceDO :${serviceDOList}">
+                                <td attr="serviceName" th:text="${serviceDO.serviceName}">serviceName</td>
+                                <td attr="serviceType" th:text="${serviceDO.serviceType}">serviceType</td>
+                                <td attr="serviceIP" th:text="${serviceDO.serviceIP}">serviceIP</td>
+                                <td attr="servicePort" th:text="${serviceDO.servicePort}">servicePort</td>
+                                <td attr="serviceParam" th:text="${serviceDO.serviceParam}">serviceParam</td>
+                                <td attr="serviceResult" th:text="${serviceDO.serviceResult}">serviceResult</td>
+                                <td attr="serviceStatus" th:text="${serviceDO.serviceStatus}">serviceStatus</td>
+                            </tr>
+                            <tr align="center">没有数据</tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div th:include="include :: footer"></div>
+
+</body>
+</html>
+<style>
+    table > tbody > tr > td{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        max-width:600px;
+    }
+    table > tbody > tr > td >span{
+        display: block;
+        max-width: 150px;
+    }
+</style>
