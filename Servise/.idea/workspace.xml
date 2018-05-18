@@ -7,28 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6dea8666-75cf-41e5-91ee-35cfd12092d1" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/../Center/src/main/resources/templates/include.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Center/src/main/resources/templates/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Center/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Center/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Center/src/main/java/com/yyu/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Center/src/main/java/com/yyu/controller/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Center/src/main/java/com/yyu/controller/PythonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Center/src/main/java/com/yyu/controller/PythonController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Center/src/main/java/com/yyu/controller/RegisterController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Center/src/main/java/com/yyu/dao/ServiceDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Center/src/main/java/com/yyu/dao/ServiceDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Center/src/main/java/com/yyu/domain/ServiceDO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Center/src/main/java/com/yyu/domain/ServiceDO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Center/src/main/java/com/yyu/network/RegisterServerHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Center/src/main/java/com/yyu/network/RegisterServerHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Center/src/main/java/com/yyu/network/ServiceRequestClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Center/src/main/java/com/yyu/network/ServiceRequestClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Center/src/main/java/com/yyu/service/ServiceTableService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Center/src/main/java/com/yyu/service/ServiceTableService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Center/src/main/java/com/yyu/service/impl/ServiceTableServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Center/src/main/java/com/yyu/service/impl/ServiceTableServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Center/src/main/resources/mybatis/ConfigTablesMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Center/src/main/resources/mybatis/ConfigTablesMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Center/src/test/java/com/yyu/network/networkTest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dependency-reduced-pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dependency-reduced-pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yyu/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yyu/Service.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yyu/network/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yyu/network/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yyu/readConfigFile/ReadConfigFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yyu/readConfigFile/ReadConfigFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yyu/readConfigFile/ServiseConfig.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yyu/readConfigFile/ServiseConfig.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yyu/register/RegisterClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yyu/register/RegisterClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/SerializationUtilTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../论文.doc" beforeDir="false" afterPath="$PROJECT_DIR$/../论文.doc" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -54,12 +34,12 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="RegisterClient.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/yyu/register/RegisterClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="30" column="9" lean-forward="true" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
+            <state>
+              <caret line="30" column="9" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -67,8 +47,8 @@
       <file leaf-file-name="Service.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/yyu/Service.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
-              <caret line="17" column="44" lean-forward="true" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
+            <state relative-caret-position="176">
+              <caret line="17" column="44" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -76,8 +56,8 @@
       <file leaf-file-name="ReadConfigFile.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/yyu/readConfigFile/ReadConfigFile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="22" column="40" lean-forward="true" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
+            <state>
+              <caret line="22" column="40" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -258,20 +238,21 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="AndroidView" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -414,7 +395,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="e0d12718-e70a-4159-bb3a-67a979a77077" name="Default" comment="" />
+      <changelist id="6dea8666-75cf-41e5-91ee-35cfd12092d1" name="Default" comment="" />
       <created>1524033319956</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -434,6 +415,7 @@
       <workItem from="1525847001504" duration="8693000" />
       <workItem from="1525918762433" duration="2665000" />
       <workItem from="1526371709190" duration="4274000" />
+      <workItem from="1526607838711" duration="712000" />
     </task>
     <servers />
   </component>
@@ -458,61 +440,39 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="94453000" />
+    <option name="totallyTimeSpent" value="95165000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1098" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
     <layout>
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" sideWeight="0.49946353" weight="0.32901832" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info id="Image Layers" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="bottom" id="Event Log" sideWeight="0.5005365" side_tool="true" weight="0.32901832" />
-      <window_info anchor="right" id="Maven Projects" weight="0.3299356" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32901832" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info id="Capture Tool" />
-      <window_info id="Designer" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
-      <window_info anchor="right" id="Database" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="UI Designer" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.399137" />
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info id="Designer" order="3" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2247854" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info id="Image Layers" order="2" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="right" id="Maven Projects" order="7" weight="0.3299356" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32901832" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32901832" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Capture Tool" order="6" />
-      <window_info id="UI Designer" order="4" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Database" order="6" weight="0.3299356" />
-      <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info id="Designer" order="3" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22474378" />
+      <window_info anchor="right" id="Database" order="6" weight="0.3299356" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="UI Designer" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.399137" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32901832" />
-      <window_info anchor="right" id="Maven Projects" order="7" weight="0.3299356" />
-      <window_info id="Favorites" order="5" side_tool="true" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -827,9 +787,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="16" column="50" lean-forward="true" selection-start-line="16" selection-start-column="50" selection-end-line="16" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -837,9 +794,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="385">
           <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -868,37 +822,28 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="296">
           <caret line="40" column="5" lean-forward="true" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/yyu/register/RegisterClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="30" column="9" lean-forward="true" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
+        <state>
+          <caret line="30" column="9" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/yyu/readConfigFile/ReadConfigFile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="22" column="40" lean-forward="true" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
+        <state>
+          <caret line="22" column="40" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/SerializationUtilTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/SerializationUtilTest.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/yyu/Service.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="17" column="44" lean-forward="true" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
+        <state relative-caret-position="176">
+          <caret line="17" column="44" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
         </state>
       </provider>
     </entry>
