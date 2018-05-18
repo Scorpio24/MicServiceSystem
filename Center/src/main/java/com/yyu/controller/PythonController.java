@@ -57,7 +57,7 @@ public class PythonController {
         int paramNumber = reqMap.size() - 3;
         for (int i = 1; i <= paramNumber; i++)
         {
-            String param = reqMap.get("param" + (i+1)).toString();
+            String param = reqMap.get("param" + i).toString();
             cmd.append(" " + param);
         }
 

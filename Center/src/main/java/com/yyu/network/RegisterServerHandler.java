@@ -24,9 +24,9 @@ public class RegisterServerHandler extends ChannelHandlerAdapter {
 
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg){
-        System.out.printf("serverhandler");
+//        System.out.printf("serverhandler");
         IOBody body = (IOBody) msg;
-        System.out.println(body.getResult().toString());
+//        System.out.println(body.getResult().toString());
         IOBody IOBody = new IOBody();
         HashMap<String, Object> serviceConfig = (HashMap) body.getResult();
         System.out.println(serviceConfig);
@@ -55,7 +55,7 @@ public class RegisterServerHandler extends ChannelHandlerAdapter {
                 e.printStackTrace();
             }
         }
-        System.out.println("111");
+//        System.out.println("111");
 
         byte[] resultBytes = SerializationUtil.serialize(IOBody);
         byte[] lineBytes = System.getProperty("line.separator").getBytes();

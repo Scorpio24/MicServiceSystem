@@ -1,0 +1,1 @@
+(Have default param:"http") Param1--"http":return "http" proxy,  "https":return "https" proxy.
