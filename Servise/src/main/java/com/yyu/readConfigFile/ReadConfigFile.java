@@ -81,7 +81,7 @@ public class ReadConfigFile {
 
         try {
             while ((line = br.readLine()) != null) {
-                resultFormat.add(line);
+                resultFormat.add(line.split("—", 2)[0]);
             }
         }
         catch (IOException e2)
